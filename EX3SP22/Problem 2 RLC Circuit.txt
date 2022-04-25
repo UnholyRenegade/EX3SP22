@@ -1,0 +1,59 @@
+# RLC Circuit
+    # 
+    #From top left of the Circuit nodes are a,b,c,d,e,f on the outside loop going clockwise
+    #
+    #
+    #  
+    #
+    #
+    #
+    #
+<Voltage>
+	Magnitude:20
+	Frequency:3.18
+	Phase:0
+</Voltage>
+<Inductor>
+	nodes: (a,b)
+	value: 20
+</Inductor>
+<Resistor>
+	nodes: (b,e)
+	value: 10
+</Resistor>
+<Capacitor>
+	nodes: (c,d)
+	Value: .05
+</Capacitor>
+<Loop>
+	Name: i1
+	Wires: a-b, b-e, e-f, f-a
+</Loop>
+<Loop>
+	Name: i2
+	Pipes: b-c, c-d, d-e, e-b
+</Loop>
+<Node>
+	Name: a
+	Position: -125.0, 100.0, 0.0
+</Node>
+<Node>
+	Name: b
+	Position: 0.0, 100.0, 0.0
+</Node>
+<Node>
+	Name: c
+	Position: 125.0, 100.0, 0.0
+</Node>
+<Node>
+	Name: d
+	Position: 125.0, -100.0, 0.0
+</Node>
+<Node>
+	Name: e
+	Position: 0.0, -100.0, 0.0
+</Node>
+<Node>
+	Name: f
+	Position: -125.0, -100.0, 0.0
+</Node>
